@@ -30,7 +30,7 @@ class Stack:
             self.top = temp
             self.height -= 1
     
-    def print_list(self):
+    def print_stack(self):
         temp = self.top
         while temp:
             print(temp.value)
