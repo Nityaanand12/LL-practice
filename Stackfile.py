@@ -25,10 +25,11 @@ class Stack:
     def pop(self):
         if self.height == 0:
             return 
-        else:
-            temp = self.top.next
-            self.top = temp
-            self.height -= 1
+        temp = self.top
+        self.top = self.top.next
+        temp.next = None
+        self.height -= 1
+        return temp
     
     def print_stack(self):
         temp = self.top
