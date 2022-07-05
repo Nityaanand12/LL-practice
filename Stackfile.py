@@ -41,7 +41,7 @@ stack.push(4)
 stack.push(5)
 stack.push(6)
 stack.pop()
-stack.print_list()
+stack.print_stack()
 print(stack.height)
 
 
