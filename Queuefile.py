@@ -1,4 +1,4 @@
-# Queues last in and last out LILO
+# Queues first in and first out FIFO
 # example queue in movie ticket counter
 
 class Node:
