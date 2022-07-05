@@ -20,8 +20,8 @@ class Queue:
             self.first = new_node
             self.last = new_node
         else:
-            new_node.next = self.first
-            self.first = new_node
+            self.last.next = new_node
+            self.last = new_node
         self.length += 1
     
     def dequeue(self):
@@ -33,11 +33,8 @@ class Queue:
             self.length -= 1
             return 
         temp = self.first
-        while temp.next:
-            previous = temp
-            temp = temp.next
-        previous.next = None
-        self.last = previous
+        self.first = self.first.next
+        temp.next = None
         self.length -= 1
         return temp
     
