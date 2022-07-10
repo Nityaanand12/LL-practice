@@ -48,7 +48,53 @@ class BinarySearchTree:
             temp = temp.left
         return temp.value
 
+    def bfs(self):
+        current_node = self.root
+        queue = []
+        results = []
+        queue.append(current_node)
+        while queue:
+            current_node = queue.pop(0)
+            results.append(current_node.value)
+            if current_node.left:
+                queue.append(current_node.left)
+            if current_node.right:
+                queue.append(current_node.right)
+        return results
 
+    def dfs_Preorder(self):
+        results = []
+        def traversal(current_node):
+            results.append(current_node.value)
+            if current_node.left:
+                traversal(current_node.left)
+            if current_node.right:
+                traversal(current_node.right)
+        traversal(self.root)
+        return results
+
+
+    def dfs_postorder(self):
+        results = []
+        def traversal(current_node)
+            if current_node.left:
+                traversal(current_node.left)
+            if current_node.right:
+                traversal(current_node.right)
+            result.append(current_node.value)
+        traversal(self.root)
+        return results
+
+    def dfs_inorder(self):
+        results = []
+        def traversal(current_node)
+            if current_node.left:
+                traversal(current_node.left)
+            result.append(current_node.value)
+            if current_node.right:
+                traversal(current_node.right)
+        traversal(self.root)
+        return results
 
 BST = BinarySearchTree()
 BST.insert(5)
